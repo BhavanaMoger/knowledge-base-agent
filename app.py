@@ -17,7 +17,6 @@ st.write("Ask any question related to company policies, leave, benefits, or work
 # ---------- CHECK GROQ API KEY ----------
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-
 if not GROQ_API_KEY:
     st.error(
         "GROQ_API_KEY is not set.\n\n"
@@ -122,4 +121,5 @@ if question:
                     for i, doc in enumerate(sources, start=1):
                         st.markdown(f"**Source {i}:**")
                         st.write(doc.page_content)
+
 
